@@ -26,13 +26,15 @@ filemenu.add_command(label='ออก')
 # Help menu
 def About():
     messagebox.showinfo('About','Design By Pinet')
-helpmenu = Menu(menubar)
+helpmenu = Menu(menubar,tearoff=0)
 menubar.add_cascade(label='ช่วยเหลือ',menu = helpmenu)
 helpmenu.add_command(label='About',command = About)
 # Donate menu
-donatemenu = Menu(menubar)
+def Donate():
+    messagebox.showinfo('Donate','BTC Address: 1234567')
+donatemenu = Menu(menubar,tearoff=0)
 menubar.add_cascade(label='บริจาค',menu = donatemenu)
-
+donatemenu.add_command(label='Donate',command = Donate)
 
 
 ###########################################
